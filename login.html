@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LOGIN</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="login.php">
+            <h1>Login</h1>
+            <form autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <div class="enter-box">
+                <div class="icon"><i class="fas fa-user"></i>
+                <input type="Email"placeholder="Username " required>
+                <span class="error-message"><?php echo $EmailErr; ?></span>
+                </div>
+            </div>
+            <div class="enter-box">
+                <div class="icon"><i class="fas fa-lock"></i>
+                <input type="password"placeholder="Password " required>
+                <span class="error-message"><?php echo $passwordErr; ?></span>
+                </div>
+            </div>
+            <div class="remember">
+                <label><input type="checkbox">Remember Me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="button">Login</button>
+            <div class="register">
+                <p>Don't have an account yet? <a href="#">Sign In</a></p>
+            </div>
+        </form>
+    </form>
+    </div>
+</body>
+</html>
